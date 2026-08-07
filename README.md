@@ -1,6 +1,6 @@
 # Globe-Data-Visualizer
 <p align="center">
-  <img src="IMG_0826.jpeg" alt="Profile Image" width="400"/>
+  <img src="IMG_0914.png" alt="Profile Image" width="400"/>
 </p>
 
 ### Core Programming Languages, Core Systems
