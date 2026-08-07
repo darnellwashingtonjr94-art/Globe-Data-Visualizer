@@ -1,0 +1,20 @@
+# backend/src/main/resources/application.yml
+server:
+  port: 8080
+
+spring:
+  application:
+    name: globe-data-visualizer
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: 6379
+
+geoip:
+  db:
+    path: classpath:data/geoip/GeoLite2-City.mmdb
+
+logging:
+  level:
+    root: INFO
+    com.visualizer: DEBUG
