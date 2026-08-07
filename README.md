@@ -24,18 +24,42 @@
 ### Cloud Providers
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white) ![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 
-A real-time, 3D network topology and bandwidth monitoring tool. It ingests simulated NetFlow/sFlow and SNMP metrics, resolves IP geolocation via MaxMind, and streams the data via WebSockets to a transparent Three.js WebGL globe.
+# Globe Data Visualizer 🌍
 
-## Tech Stack
-* **Backend:** Java 17, Spring Boot, WebSockets, Redis
-* **Frontend:** React 18, Three.js, React-Force-Graph-3D
-* **Deployment:** Docker, Docker Compose
+## What is this about?
+The **Globe Data Visualizer** is a full-stack, containerized application designed to monitor and visualize live network topology. It translates raw network metrics, IP addresses, and traffic flows into a beautiful, interactive 3D globe in your browser. Built with a Java Spring Boot backend and a React (Three.js) frontend, it aims to make complex infrastructure observability intuitive and visually engaging.
 
-## Getting Started
+---
 
-1. Clone the repository.
-2. Copy `.env.example` to `.env`.
-3. Download the MaxMind GeoLite2-City.mmdb file and place it in `backend/src/main/resources/data/geoip/`.
-4. Run the stack:
-   ```bash
-   docker-compose up --build
+## What this does?
+* **Real-Time Data Ingestion:** Polls network devices via SNMP and parses live traffic flow data (with built-in simulated mocking for testing).
+* **Geographic Resolution:** Translates network IP addresses into physical latitude and longitude coordinates using the MaxMind GeoIP2 database.
+* **Live WebSocket Streaming:** Pushes network state changes, health alerts, and link saturations directly to the client with zero latency or page reloading.
+* **3D Visualization:** Renders a responsive, interactive 3D globe that dynamically draws network nodes and links.
+* **Dynamic Heatmapping:** Color-codes network links based on bandwidth utilization (e.g., Green for normal, Yellow for warning, Red for critical).
+* **Alerts & Filtering:** Features a live Heads Up Display (HUD) for critical alerts and toggleable filters to isolate specific network conditions.
+
+---
+
+## Why is this cool?
+* **True Real-Time Observability:** By pairing Spring Boot WebSockets with React state management, the UI updates instantly the millisecond your backend detects a network change.
+* **Containerized Architecture:** The entire stack—Backend (Java/Maven), Frontend (React/Nginx), and cache (Redis)—is orchestrated via Docker Compose. It runs anywhere without polluting your host machine.
+* **CI/CD Ready:** Includes fully configured GitHub Actions pipelines to automatically build, test, and package your Docker containers on every push.
+* **High-Performance Rendering:** Leverages WebGL and `react-force-graph-3d` to maintain smooth 60fps frame rates even when rendering complex, multi-node global topologies.
+
+---
+
+## How to install this?
+
+### Prerequisites
+Before you begin, ensure you have the following installed on your host machine:
+* [Docker](https://www.docker.com/get-started)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* Git
+
+### Step-by-Step Setup
+
+**1. Clone the repository**
+```bash
+git clone [https://github.com/yourusername/globe-data-visualizer.git](https://github.com/yourusername/globe-data-visualizer.git)
+cd globe-data-visualizer
