@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import GlobeEngine from './components/GlobeEngine';
 import MetricsOverlay from './components/MetricsOverlay';
