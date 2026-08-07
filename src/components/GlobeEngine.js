@@ -1,4 +1,3 @@
-// src/components/GlobeEngine.js
 import React, { useEffect, useRef, useState } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import { TopologyWebSocket } from '../network/wsClient';
