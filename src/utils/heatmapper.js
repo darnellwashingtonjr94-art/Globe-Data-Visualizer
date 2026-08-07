@@ -1,5 +1,3 @@
-// src/utils/heatmapper.js
-
 /**
  * Returns a hex color string based on utilization percentage.
  * @param {number} utilization - The percentage of bandwidth used (0 to 100)
