@@ -1,4 +1,3 @@
-// src/components/MetricsOverlay.js
 import React from 'react';
 
 export default function MetricsOverlay({ alerts }) {
