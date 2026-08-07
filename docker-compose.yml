@@ -1,11 +1,12 @@
-version: '3.8'
-
 services:
   frontend:
     build:
-      context: .
-      dockerfile: Dockerfile
-    image: frontend-app:latest
-    ports:
-      - "80:80"
-    restart: unless-stopped
+      context: .                        # Looks in the root directory for package.json
+      dockerfile: frontend/Dockerfile   # Tells Docker where the instructions are
+    # ... your other frontend settings (ports, etc.)
+
+  backend:
+    build:
+      context: .                        # Looks in the root directory for pom.xml
+      dockerfile: backend/Dockerfile    # Tells Docker where the instructions are
+    # ... your other backend settings (ports, etc.)
