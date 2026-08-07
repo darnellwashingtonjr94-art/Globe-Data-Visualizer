@@ -1,7 +1,6 @@
-// Default to your backend's port and websocket endpoint
 const WS_URL = process.env.REACT_APP_WS_URL || 'ws://localhost:8080/topology';
 
-class WsClient {
+class WebSocketClient {
   constructor() {
     this.socket = null;
     this.listeners = [];
@@ -46,5 +45,9 @@ class WsClient {
   }
 }
 
-const wsClient = new WsClient();
-export default wsClient;
+// Instantiate the client
+const TopologyWebSocket = new WebSocketClient();
+
+// Export as both named and default to satisfy your component's specific request
+export { TopologyWebSocket };
+export default TopologyWebSocket;
