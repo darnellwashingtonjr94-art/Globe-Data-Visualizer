@@ -1,0 +1,36 @@
+# Dependency directories
+node_modules/
+npm-debug.log
+npm-debug.log.*
+yarn-error.log
+yarn-debug.log*
+
+# Build outputs (to ensure a fresh build inside the container)
+build/
+dist/
+out/
+.next/
+
+# Git and environment files
+.git/
+.gitignore
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Docker-related files
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# OS/Editor generated files
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
